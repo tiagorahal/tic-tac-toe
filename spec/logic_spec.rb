@@ -7,28 +7,13 @@ module TicTacToe
     describe '#valid_cell?' do
       it 'Check if the cell is a valid position - Should return true' do
         expect(game_logic.valid_cell?('1')).to eql(true)
-      end
-
-      it 'Check if the cell is a valid position - Should return false' do
         expect(game_logic.valid_cell?('this a string!')).to eql(false)
-      end
-
-      it 'Check if the cell is a valid position - Should return false' do
         expect(game_logic.valid_cell?('')).to eql(false)
-      end
-
-      it 'Check if the cell is a valid position - Should return false' do
+        expect(game_logic.valid_cell?('-3')).to_not eql(true)
+        expect(game_logic.valid_cell?('12')).to eql(false)
         player = double('player_1', name: 'John', letter: 'X')
         game_logic.set_position(2, player)
-        expect(game_logic.valid_cell?('2')).to eql(false)
-      end
-
-      it 'Check if the cell is a valid position - Should return false' do
-        expect(game_logic.valid_cell?('-3')).to eql(false)
-      end
-
-      it 'Check if the cell is a valid position - Should return false' do
-        expect(game_logic.valid_cell?('12')).to eql(false)
+        expect(game_logic.valid_cell?('2')).to_not eql(true)
       end
     end
 
