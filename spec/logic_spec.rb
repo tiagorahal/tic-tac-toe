@@ -78,7 +78,6 @@ module TicTacToe
     describe '#show_board' do
       # The board is empty
       it 'Returns the empty board for the user' do
-        # rubocop:disable Layout/LineLength
         expect(game_logic.show_board).to eq("+---+---+---+\n| 1 | 2 | 3 |\n+---+---+---+\n| 4 | 5 | 6 |\n+---+---+---+\n| 7 | 8 | 9 |\n+---+---+---+\n\n")
       end
 
@@ -93,7 +92,6 @@ module TicTacToe
         game_logic.set_position(3, player1)
 
         expect(game_logic.show_board).to eq("+---+---+---+\n| X | X | X |\n+---+---+---+\n| O | O | 6 |\n+---+---+---+\n| 7 | 8 | 9 |\n+---+---+---+\n\n")
-        # rubocop:enable Layout/LineLength
       end
     end
   end
