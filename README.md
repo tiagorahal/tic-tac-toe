@@ -4,7 +4,7 @@
 
 ![](./assets/tictactoe_example.gif)
 
-> A collaborative project to build Tic-tac-toe-game.
+> A collaborative project to build Tic-tac-toe-game
 
 ## Built With
 
@@ -57,6 +57,8 @@ Setup by  following the installation instructions below :
 * Run
  On your terminal, type bin/main.rb
 
+### Install
+
 Run the following command into your terminal:
 
 ```console
@@ -72,6 +74,12 @@ ruby bin/main.rb
 ```
 
 ## Authors
+
+👤 **Francis Uloko**
+
+- GitHub: [@francisuloko](https://github.com/francisuloko)
+- Twitter: [@FrancisUloko](https://twitter.com/FrancisUloko)
+- LinkedIn: [Francis Uloko](https://www.linkedin.com/in/francisuloko/)
 
 👤 **Tiago Rahal Aires**
 
