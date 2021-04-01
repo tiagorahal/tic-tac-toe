@@ -99,7 +99,7 @@ rspec
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page]https://github.com/tiagorahal/tic-tac-toe/issues).
+Feel free to check the [issues page](https://github.com/tiagorahal/tic-tac-toe/issues).
 
 ## Show your support
 
