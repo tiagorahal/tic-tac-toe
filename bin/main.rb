@@ -1,51 +1,54 @@
-require_relative '../lib/player'
-require_relative '../lib/helper'
+class Board
+  attr_accessor :valid, :square
+  attr_reader :game
 
-module TicTacToe
-  game = GameLogic.new
-
-  puts "Welcome to Ruby's Tic-Tac-Toe!"
-
-  puts "\nEnter Player 1 name:"
-  player1 = Player.new(gets.chomp.capitalize, 'X')
-
-  puts "\nEnter Player 2 name:"
-  player2 = Player.new(gets.chomp.capitalize, 'O')
-
-  puts "\n#{player1.name} will play with X and #{player2.name} will play with O"
-
-  puts "\nLets Start!"
-  puts '[press ENTER to start]'
-  gets
-
-  player_turn = player1
-
-  while game.game_is_on
-    system('clear')
-    system('cls')
-
-    puts game.show_board
-
-    puts "It's #{player_turn.name}'s turn!"
-
-    puts "\nPlease select an available number from the board:"
-    cell = gets.chomp
-
-    until game.valid_cell?(cell)
-      puts "\nInvalid move. please enter a number from 1-9 that has not been taken yet."
-      cell = gets.chomp
-    end
-
-    game.set_position(cell.to_i, player_turn)
-
-    player_turn = player_turn == player1 ? player2 : player1
-
+  def initialize
+    @square = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    @game = true
+    @valid = false
   end
 
-  system('clear')
-  system('cls')
+  def create_board
+    "     -----+-----+-----
+     [ #{@square[0]} ] [ #{@square[1]} ] [ #{@square[2]} ]
+     [ #{@square[3]} ] [ #{@square[4]} ] [ #{@square[5]} ]
+     [ #{@square[6]} ] [ #{@square[7]} ] [ #{@square[8]} ]
+     -----+-----+-----"
+  end
 
-  puts game.show_board
+  def check_valid_move(input)
+    @input = input
+    if @square.include?(input)
+      @valid = true
+    else
+      @valid = false
+      false
+    end
+  end
 
-  puts game.result
+  def win(player)
+    win = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6], [0, 4, 8]]
+    win.each { |arr| return true if win_check(arr, player.letter) }
+    false
+  end
+
+  def draw
+    true if @square.none?(Integer)
+  end
+
+  private
+
+  def win_check(arr, letter)
+    true if [@square[arr[0]], @square[arr[1]], @square[arr[2]]].all?(letter)
+  end
+end
+
+class Player
+  attr_accessor :name
+  attr_reader :letter
+
+  def initialize(letter)
+    @name = ''
+    @letter = letter
+  end
 end
