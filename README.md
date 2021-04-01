@@ -2,7 +2,7 @@
 
 # Tic Tac Toe Game
 
-![](C:/workspace/Nova pasta/tic-tac-toe-test - Copia/assets/tictactoe_example.gif)
+![](/assets/tictactoe_example.gif)
 
 > A collaborative project to build Tic-tac-toe-game, and tested with Rspec
 
