@@ -2,9 +2,9 @@
 
 # Tic Tac Toe Game
 
-![](./assets/tictactoe_example.gif)
+![](C:/workspace/Nova pasta/tic-tac-toe-test - Copia/assets/tictactoe_example.gif)
 
-> A collaborative project to build Tic-tac-toe-game.
+> A collaborative project to build Tic-tac-toe-game, and tested with Rspec
 
 ## Built With
 
@@ -25,7 +25,7 @@
 
 ### A winning combination should look like
 
-![](./assets/tic_winner.png)
+![](C:/workspace/Nova pasta/tic-tac-toe-test - Copia/assets/tic_winner.png)
 
 ## Getting Started
 
@@ -49,13 +49,17 @@ Setup by  following the installation instructions below :
 
 * Open your terminal and locate on the folder you want to clone the repository.
 * Setup
- Create a new folder/directory for the project
- Be sure to have a Github account and that this account is connected locally on your PC
+  Create a new folder/directory for the project
+   Be sure to have a Github account and that this account is connected locally on your PC
 * Install
- Go to the desired directory on your terminal
- git clone https://github.com/tiagorahal/tic-tac-toe.git
+  Go to the desired directory on your terminal
+   git clone https://github.com/tiagorahal/tic-tac-toe.git
 * Run
- On your terminal, type bin/main.rb
+  On your terminal, type bin/main.rb
+* Run the test
+  On your terminal, type rspec
+
+### Install
 
 Run the following command into your terminal:
 
@@ -71,7 +75,19 @@ Run the following command into your terminal to play the game:
 ruby bin/main.rb
 ```
 
+Run the following command into your terminal inside the root folder to run the tests:
+
+```console
+rspec
+```
+
 ## Authors
+
+👤 **Francis Uloko**
+
+- GitHub: [@francisuloko](https://github.com/francisuloko)
+- Twitter: [@FrancisUloko](https://twitter.com/FrancisUloko)
+- LinkedIn: [Francis Uloko](https://www.linkedin.com/in/francisuloko/)
 
 👤 **Tiago Rahal Aires**
 
@@ -96,5 +112,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
-
+This project is [MIT](./MIT.md) licensed
